@@ -14,7 +14,7 @@ RUN apt-key update && \
     apt-get upgrade -y && \
     echo "Etc/UTC" > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    apt-get install -y --no-install-recommends \
+    apt-get install -y --no-install-recommends --no-install-suggests \
         ca-certificates \
         curl && \
     mkdir -p /usr/local/bin && \
